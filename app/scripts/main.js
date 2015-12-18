@@ -77,13 +77,12 @@
         }
     }
 
-
     function getQuote() {
 
         var random = Math.floor( Math.random() * quotes.length),
-        quoteResult = quotes[random].quote,
-        characterResult = quotes[random].character,
-        force = quotes[random].force;
+            quoteResult = quotes[random].quote,
+            characterResult = quotes[random].character,
+            force = quotes[random].force;
 
         var saberLight = document.getElementById('saber__light');
 
