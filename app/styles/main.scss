@@ -25,6 +25,11 @@ body {
   background: #000 url(../images/bg.jpg);
 }
 
+/* remove button focus */
+button:focus {
+  outline:0 !important;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -108,7 +113,12 @@ body {
     padding-top: 40px;
   }
 }
-
+.header {
+  text-align: center;
+}
+.header__logo {
+  padding-top: 20px;
+}
 .saber {
   position: relative;
   margin: 0 auto;
@@ -124,7 +134,7 @@ body {
   height: 250px;
   width: 10px;
   border-radius: 12px 12px 0 0;
-  background: red;
+  background: rgba(white, 0.1);
   
 
   &.force-good {
@@ -148,5 +158,21 @@ body {
     border-radius: 5px;
     background: rgb(226,226,226);
     background: linear-gradient(to right, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%);
-}
 
+    &:focus {
+      outline:0 !important;
+    }
+}
+.clicker {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    pointer-events: none;
+    animation: blinker 1.3s linear infinite;
+}
+ 
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
