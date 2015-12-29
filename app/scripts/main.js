@@ -59,7 +59,8 @@
     // variables
     var button = document.getElementById('quoteButton'),
     clickTimes = 0,
-    clicker = document.getElementById('clicker');
+    clicker = document.getElementById('clicker'),
+    saberLight = document.getElementById('saber__light');
 
 
     // helper functions
@@ -88,8 +89,7 @@
         var random = Math.floor( Math.random() * quotes.length),
             quoteResult = quotes[random].quote,
             characterResult = quotes[random].character,
-            force = quotes[random].force,
-            saberLight = document.getElementById('saber__light');
+            force = quotes[random].force;
 
         if (force === 'good') {
 
@@ -121,6 +121,7 @@
 
             if(clickTimes === 0) {
                 clicker.parentNode.removeChild(clicker);
+                  addClass(saberLight, 'is-animated');
             }
 
             //console.log("clicked: " + clickTimes);

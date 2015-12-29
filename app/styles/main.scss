@@ -127,7 +127,8 @@ button:focus {
   width: 20px;
   height: 300px;
 }
-#saber__light {
+#saber__light,
+#saber__light-dark {
   position: absolute;
   display: block;
   bottom: 50px;
@@ -145,6 +146,9 @@ button:focus {
   &.force-bad {
     background: $red;
     box-shadow: 0 0 150px 35px $red;
+  }
+  &.is-animated {
+    animation: iluminating 5s linear;
   }
 
 }
@@ -176,4 +180,14 @@ button:focus {
  
 @keyframes blinker {  
   50% { opacity: 0; }
+}
+@keyframes iluminating {  
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 250px;
+    opacity: 1;
+  }
 }
