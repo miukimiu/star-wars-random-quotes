@@ -84,8 +84,7 @@
 
     // get quote function
     function getQuote() {
-
-        //getQuote() local variables 
+        //getQuote() local variables
         var random = Math.floor( Math.random() * quotes.length),
             quoteResult = quotes[random].quote,
             characterResult = quotes[random].character,
@@ -108,15 +107,15 @@
             addClass(saberLight, 'force-bad');
 
         }
-        
+
         document.getElementById('quote').innerHTML = quoteResult;
         document.getElementById('character').innerHTML = characterResult;
-        
+
     }
 
     // DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function(){
-        
+
         button.addEventListener('click', function(){
             getQuote();
 
@@ -126,7 +125,7 @@
 
             //console.log("clicked: " + clickTimes);
 
-            clickTimes ++;
+            clickTimes++;
         });
     });
 
