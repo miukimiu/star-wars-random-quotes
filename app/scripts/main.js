@@ -56,11 +56,16 @@
         force: 'good'
     }];
 
+    // variables
+    var button = document.getElementById('quoteButton'),
+    clickTimes = 0,
+    clicker = document.getElementById('clicker');
+
+
     // helper functions
     function hasClass(el, className) {
         return el.classList ? el.classList.contains(className) : new RegExp('\\b' + className + '\\b').test(el.className);
     }
-
     function addClass(el, className) {
         if (el.classList) {
             el.classList.add(className);
@@ -77,17 +82,15 @@
         }
     }
 
+    // get quote function
     function getQuote() {
 
+        //getQuote() local variables 
         var random = Math.floor( Math.random() * quotes.length),
             quoteResult = quotes[random].quote,
             characterResult = quotes[random].character,
-            force = quotes[random].force;
-
-        var saberLight = document.getElementById('saber__light');
-
-        console.log('class: ' + saberLight);
-
+            force = quotes[random].force,
+            saberLight = document.getElementById('saber__light');
 
         if (force === 'good') {
 
@@ -105,16 +108,25 @@
             addClass(saberLight, 'force-bad');
 
         }
+        
         document.getElementById('quote').innerHTML = quoteResult;
         document.getElementById('character').innerHTML = characterResult;
-
+        
     }
 
-    var button = document.getElementById('quoteButton');
-
+    // DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function(){
+        
         button.addEventListener('click', function(){
             getQuote();
+
+            if(clickTimes === 0) {
+                clicker.parentNode.removeChild(clicker);
+            }
+
+            //console.log("clicked: " + clickTimes);
+
+            clickTimes ++;
         });
     });
 
