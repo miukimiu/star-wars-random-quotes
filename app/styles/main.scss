@@ -25,6 +25,14 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background: #000 url(../images/bg.jpg);
+
+  a {
+    color: $twitter-blue;
+
+    &:hover {
+      color: darken($twitter-blue, 10%);
+    }
+  }
 }
 
 /* remove button focus */
@@ -205,4 +213,18 @@ button:focus {
     height: 250px;
     opacity: 1;
   }
+}
+
+.footer {
+
+  > p {
+    width: 50%;
+    float: left;
+  }
+}
+.footer__credits {
+  
+}
+.footer__fork {
+  text-align: right;
 }
