@@ -10,6 +10,7 @@ $icon-font-path: '../fonts/';
 $blue: rgb(55,132,214);
 $red: rgb(229,17,21);
 $gray: #e5e5e5;
+$twitter-blue: #00aced;
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -179,11 +180,17 @@ button:focus {
     animation: blinker 1.7s linear infinite;
 }
 
-.tweet-ct {
+.share-twitter {
   text-align: right;
-}
-#link {
-  color: $blue;
+
+  img {
+    margin-right: 5px;
+  }
+  a {
+    color: $twitter-blue;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }
  
 @keyframes blinker {  

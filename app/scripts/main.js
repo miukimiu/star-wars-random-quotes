@@ -128,7 +128,7 @@
 
         button.addEventListener('click', function(){
             getQuote();
-            clicker.parentNode.removeChild(clicker);
+            clicker.parentNode.removeChild(clicker); // remove the blinker clicker animation
             clickTimes++;
         });
     });
