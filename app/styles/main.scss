@@ -137,6 +137,7 @@ button:focus {
   width: 10px;
   border-radius: 12px 12px 0 0;
   background: rgba(white, 0.1);
+  pointer-events: none;
   
 
   &.force-good {
@@ -176,6 +177,13 @@ button:focus {
     width: 40px;
     pointer-events: none;
     animation: blinker 1.7s linear infinite;
+}
+
+.tweet-ct {
+  text-align: right;
+}
+#link {
+  color: $blue;
 }
  
 @keyframes blinker {  

@@ -89,7 +89,9 @@
         var random = Math.floor( Math.random() * quotes.length),
             quoteResult = quotes[random].quote,
             characterResult = quotes[random].character,
-            force = quotes[random].force;
+            force = quotes[random].force,
+            tweet = document.getElementById('tweet'),
+            link = "http://twitter.com/home/?status=" + quoteResult + " via @miukimiu";
 
         if (force === 'good') {
 
@@ -110,22 +112,23 @@
 
         document.getElementById('quote').innerHTML = quoteResult;
         document.getElementById('character').innerHTML = characterResult;
+        
+        tweet.setAttribute('href', link);
 
     }
 
     // DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function(){
 
+        // the light saber was not clicked but the first random quote is loaded
+        if(clickTimes === 0) {
+            getQuote();
+            addClass(saberLight, 'is-animated'); // the light saber
+        }
+
         button.addEventListener('click', function(){
             getQuote();
-
-            if(clickTimes === 0) {
-                clicker.parentNode.removeChild(clicker);
-                  addClass(saberLight, 'is-animated');
-            }
-
-            //console.log("clicked: " + clickTimes);
-
+            clicker.parentNode.removeChild(clicker);
             clickTimes++;
         });
     });
