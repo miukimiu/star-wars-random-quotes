@@ -91,7 +91,7 @@
             characterResult = quotes[random].character,
             force = quotes[random].force,
             tweet = document.getElementById('tweet'),
-            link = "http://twitter.com/home/?status=" + quoteResult + " via @miukimiu";
+            link = 'http://twitter.com/home/?status=' + quoteResult + ' via @miukimiu';
 
         if (force === 'good') {
 
@@ -112,7 +112,6 @@
 
         document.getElementById('quote').innerHTML = quoteResult;
         document.getElementById('character').innerHTML = characterResult;
-        
         tweet.setAttribute('href', link);
 
     }
