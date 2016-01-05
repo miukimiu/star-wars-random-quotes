@@ -11,14 +11,6 @@ $red: rgb(229,17,21);
 $gray: #e5e5e5;
 $twitter-blue: #00aced;
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-/* Space out content a bit */
 body {
   font-family: 'Roboto', sans-serif;
   padding-top: 20px;
@@ -44,17 +36,15 @@ button:focus {
   max-width: 1140px;
   margin: 0 auto;
 }
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* Custom page header */
 .header {
+  text-align: center;
 
-  /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
@@ -63,11 +53,10 @@ button:focus {
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid rgba($gray, 0.1);
+.header__logo {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .container-narrow > hr {
@@ -111,12 +100,6 @@ button:focus {
   h2 {
     padding-top: 40px;
   }
-}
-.header {
-  text-align: center;
-}
-.header__logo {
-  padding-top: 20px;
 }
 .saber {
   position: relative;
@@ -177,19 +160,7 @@ button:focus {
     animation: blinker 1.7s linear infinite;
 }
 
-.share-twitter {
-  text-align: right;
-
-  img {
-    margin-right: 5px;
-  }
-  a {
-    color: $twitter-blue;
-    font-size: 14px;
-    font-weight: normal;
-  }
-}
- 
+// clicker blinking animation
 @keyframes blinker {  
   50% { opacity: 0; }
 }
@@ -204,7 +175,24 @@ button:focus {
   }
 }
 
+.share-twitter {
+  text-align: right;
+
+  img {
+    margin-right: 5px;
+  }
+  a {
+    color: $twitter-blue;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+ 
+// footer
 .footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid rgba($gray, 0.1);
 
   > p {
     width: 50%;
