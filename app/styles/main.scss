@@ -1,7 +1,6 @@
 $icon-font-path: '../fonts/';
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
@@ -40,9 +39,13 @@ button:focus {
   outline:0 !important;
 }
 
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
