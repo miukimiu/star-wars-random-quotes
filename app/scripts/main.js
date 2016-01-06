@@ -13,7 +13,7 @@
     }, {
         quote: 'You don’t know how hard I found it, signing the order to terminate your life',
         character: 'Governor ‘Grand Moff’ Tarkin',
-        force: 'good'
+        force: 'bad'
     }, {
         quote: 'He’s holding a thermal detonator!',
         character: 'C-3PO',
@@ -45,6 +45,10 @@
     }, {
         quote: 'Mmm. Lost a planet, Master Obi-Wan has. How embarrassing.',
         character: 'Yoda',
+        force: 'good'
+    }, {
+        quote: 'We\'ll see each other again. I believe that.',
+        character: 'Rey',
         force: 'good'
     }, {
         quote: 'Lando’s not a system he’s a man!',
