@@ -1,6 +1,8 @@
 # Star wars random quotes
 
-Star wars random quotes in pure javascript
+Star wars random quotes in pure javascript.
+
+You can see it [here](http://miukimiu.github.io/star-wars-random-quotes/)
 
 ### Install gulp and Bower
 
